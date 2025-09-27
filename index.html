@@ -12,284 +12,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
 
-    <style>
-        /* --- AI/ML Themed CSS --- */
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Space+Grotesk:wght@400;500;700&display=swap');
-
-        /* General Body & Typography */
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #0c0c0c; /* Dark charcoal/near-black background */
-            color: #e0e0e0; /* Light gray text for contrast */
-            position: relative;
-            padding-top: 70px; /* Offset for fixed navbar */
-        }
-
-        h1, .h1, h2, h3, h4, h5, h6 {
-            font-family: 'Space Grotesk', sans-serif; /* Modern, tech-y font for headings */
-            font-weight: 700;
-            color: #00e6e6; /* Bright cyan/aqua for headings - AI/ML theme */
-        }
-
-        a {
-            color: #00e6e6; /* Link color matching headings */
-            text-decoration: none;
-        }
-        a:hover {
-            color: #00cccc; /* Slightly darker cyan on hover */
-        }
-
-        /* Navbar */
-        .navbar {
-            background-color: #1a1a1a !important; /* Slightly lighter dark for navbar */
-            box-shadow: 0 2px 10px rgba(0, 230, 230, 0.1); /* Subtle glowing shadow */
-        }
-
-        .navbar-brand h1 {
-            color: #00e6e6; /* Bright cyan for brand */
-            font-size: 1.8rem;
-        }
-
-        .nav-link {
-            color: #a0a0a0; /* Lighter gray for nav links */
-            font-weight: 400;
-            padding: 0.5rem 1rem;
-            transition: color 0.3s;
-        }
-
-        .nav-link:hover {
-            color: #00e6e6; /* Bright cyan on hover */
-        }
-
-        .btn-primary {
-            background-color: #00e6e6; /* Bright cyan for primary button */
-            border-color: #00e6e6;
-            border-radius: 50px;
-            padding: 0.6rem 2.2rem;
-            font-weight: 600;
-            color: #0c0c0c; /* Dark text on bright button */
-            transition: all 0.3s ease;
-        }
-
-        .btn-primary:hover {
-            background-color: #00cccc; /* Slightly darker cyan for hover */
-            border-color: #00cccc;
-            transform: translateY(-2px);
-            color: #0c0c0c;
-        }
-
-        /* Home Banner */
-        .banner {
-            background-color: #1a1a1a; /* Dark background for banner section */
-            padding: 80px 0;
-        }
-
-        .banner .lead {
-            font-size: 1.2rem;
-            color: #c0c0c0; /* Slightly lighter gray for lead text */
-            font-weight: 600;
-        }
-
-        .hero-headline {
-            font-size: 3.2rem; /* Slightly larger for impact */
-            line-height: 1.2;
-            color: #e0e0e0; /* White/off-white for main headline */
-        }
-
-        /* My Photo Home - Adjusted for better shape and size */
-        .my-photo-Poornima { 
-            max-width: 300px; /* Increased size */
-            aspect-ratio: 1/1; /* Ensure perfect circle */
-            object-fit: cover; /* Ensures image covers the area without distortion */
-            object-position: center; /* Center the visible part of the image */
-            border-radius: 50%;
-            border: 5px solid #00e6e6; /* Bright cyan border */
-            box-shadow: 0 0 20px rgba(0, 230, 230, 0.5); /* Glowing effect for AI/ML theme */
-            animation: pulseGlow 2s infinite alternate; /* Subtle breathing glow */
-        }
-
-        @keyframes pulseGlow {
-            from {
-                box-shadow: 0 0 15px rgba(0, 230, 230, 0.3);
-            }
-            to {
-                box-shadow: 0 0 25px rgba(0, 230, 230, 0.7);
-            }
-        }
-        
-        /* About Section */
-        #about-me { background-color: #0c0c0c !important; }
-        .about-icon {
-            font-size: 10rem;
-            color: rgba(0, 230, 230, 0.1); /* Very subtle cyan icon */
-        }
-        
-        /* Skills Section */
-        #skills { background-color: #1a1a1a !important; }
-        .skill-card {
-            border: 1px solid #333; /* Darker border */
-            background-color: #1a1a1a; /* Darker card background */
-            box-shadow: 0 4px 15px rgba(0, 230, 230, 0.1); /* Subtle glow shadow */
-            transition: transform 0.3s, box-shadow 0.3s;
-            color: #e0e0e0; /* Light text for skills */
-        }
-        .skill-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 25px rgba(0, 230, 230, 0.3); /* Stronger glow on hover */
-            background-color: #222222; /* Slightly lighter on hover */
-        }
-        .skill-icon {
-            font-size: 3rem;
-            color: #00e6e6; /* Bright cyan icon */
-            margin-bottom: 1rem;
-        }
-
-        /* Experience Timeline */
-        #experience { background-color: #0c0c0c !important; }
-        .experience-timeline {
-            position: relative;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        .experience-timeline::after {
-            content: '';
-            position: absolute;
-            width: 3px;
-            background-color: #00e6e6;
-            top: 0;
-            bottom: 0;
-            left: 20px;
-        }
-        .timeline-item {
-            padding: 10px 40px;
-            position: relative;
-            background-color: inherit;
-            width: 100%;
-            padding-left: 60px;
-            margin-bottom: 20px;
-        }
-        .timeline-dot {
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            background-color: #0c0c0c;
-            border: 4px solid #00e6e6;
-            border-radius: 50%;
-            left: 11px;
-            top: 24px;
-            z-index: 1;
-        }
-        .timeline-content {
-            background-color: #1a1a1a;
-            padding: 25px;
-            border-radius: 8px;
-            border-left: 4px solid #00e6e6;
-            color: #e0e0e0;
-        }
-
-        /* Projects Section */
-        #projects { background-color: #1a1a1a !important; }
-        .project-card {
-            border: 1px solid #333;
-            background: #1a1a1a;
-            box-shadow: 0 4px 15px rgba(0, 230, 230, 0.1);
-            height: 100%;
-            transition: transform 0.3s, box-shadow 0.3s;
-            color: #e0e0e0;
-        }
-        .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 25px rgba(0, 230, 230, 0.3);
-            background-color: #222222;
-        }
-        .project-card .card-img-top {
-            width: 100%;
-            height: 180px; /* Fixed height for project images */
-            object-fit: cover; /* Cover the area without distortion */
-            border-bottom: 1px solid #333;
-        }
-        .project-card .card-body {
-            padding: 1.5rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between; /* Pushes content and button apart */
-            flex-grow: 1;
-        }
-        .project-card .card-title {
-            color: #00e6e6; /* Project title color */
-            margin-bottom: 1rem;
-        }
-        .project-link {
-            display: inline-block; /* Make button behave like inline block */
-            margin-top: auto; /* Push to bottom of card body */
-            padding: 0.5rem 1.5rem;
-            font-size: 0.9rem;
-            border-radius: 50px;
-            background-color: #00e6e6;
-            border-color: #00e6e6;
-            color: #0c0c0c;
-            transition: all 0.3s ease;
-        }
-        .project-link:hover {
-            background-color: #00cccc;
-            border-color: #00cccc;
-            transform: translateY(-2px);
-            color: #0c0c0c;
-        }
-
-
-        /* Research Section */
-        #research { background-color: #0c0c0c !important; }
-        .research-item {
-            background-color: #1a1a1a;
-            padding: 20px;
-            border-left: 4px solid #00e6e6;
-            border-radius: 8px;
-            margin-bottom: 1.5rem;
-        }
-        .research-item h4 {
-            color: #e0e0e0; /* Research item title color */
-            margin-bottom: 0.5rem;
-        }
-
-        /* Contact Section */
-        #contact { background-color: #1a1a1a !important; }
-        .contact-card {
-            border: none;
-            background-color: #1a1a1a;
-            transition: all 0.3s ease;
-            color: #e0e0e0;
-        }
-        .contact-card:hover {
-             transform: scale(1.05);
-        }
-        .contact-card i {
-            font-size: 2rem;
-            color: #00e6e6;
-            margin-bottom: 10px;
-        }
-        .contact-card a {
-            color: #00e6e6;
-            font-weight: 600;
-        }
-        .social-icons a {
-            color:#00e6e6;
-            font-size: 2.2rem;
-            margin: 0 15px;
-            transition: color 0.3s ease, transform 0.3s ease;
-        }
-        .social-icons a:hover {
-            color: #00cccc;
-            transform: translateY(-3px);
-        }
-
-        /* Footer */
-        footer {
-            background-color:#0a0a0a;
-            color: #b0b0b0;
-            padding: 30px 0;
-        }
-    </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
@@ -306,6 +28,7 @@
                     <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
                     <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
                     <li class="nav-item"><a class="nav-link" href="#research">Research</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#certificates">Certificates</a></li>
                     <li class="nav-item"><a class="nav-link btn btn-primary" href="#contact">Contact</a></li>
                 </ul>
             </div>
@@ -319,9 +42,14 @@
                     <img src="images/Poornima_Professional_short.png" class="img-fluid my-photo-Poornima" alt="Poornima Tagaram AI ML Engineer">
                 </div>
                 <div class="col-md-6">
-                    <p class="lead">Machine Learning Engineer</p>
-                    <h1 class="hero-headline">Developing State-of-the-Art AI Solutions</h1>
-                    <p>A results-oriented Machine Learning Engineer pursuing a Master's in Applied Machine Intelligence. Experienced in the end-to-end ML workflow, from processing complex datasets to training deep learning models in Python using PyTorch, TensorFlow, and JAX. Eager to contribute to challenging AI problems and collaborate on building robust, scalable systems.</p>
+                    <p class="lead">Master’s in Applied Machine Intelligence</p>
+                    <h1 class="hero-headline">Applied Machine Intelligence: My Path of Discovery and Innovation</h1>
+                    <section id="learning-journey">
+                        <p>As my journey into <strong>Applied Machine Intelligence</strong> progressed, I realized that the true strength of AI comes from a blend of <strong>mathematics, data skills, algorithms, and practical implementation</strong>. To build this foundation, I followed a structured path of learning and experimentation.</p>
+                        <p>I began by strengthening my fundamentals in <strong>mathematics for AI and ML</strong>, then moved into mastering the data lifecycle—learning how to <strong>collect, clean, and process data</strong>, engineer meaningful features, and uncover insights through <strong>exploratory data analysis</strong>. I also explored the art of <strong>data visualization</strong> using tools and libraries like <strong>Pandas, NumPy, Matplotlib, and Seaborn</strong>, which allowed me to communicate insights effectively.</p>
+                        <p>From there, I immersed myself in <strong>machine learning algorithms</strong>, starting with classical models such as <strong>linear / logistic regression, decision trees, SVMs, KNN, and Naive Bayes</strong>.</p>
+                        <p>My curiosity naturally led me into <strong>deep learning</strong>, where I built and experimented with <strong>CNNs</strong> and <strong>LSTMs</strong>, explored <strong>GANs</strong>, and worked on <strong>transformer-based architectures</strong>. I practiced extensively with libraries like <strong>TensorFlow, PyTorch, and Keras</strong>, turning theory into working prototypes.</p>
+                    </section>
                     <a href="#projects" class="btn btn-primary">View My Work</a>
                 </div>
             </div>
@@ -333,8 +61,8 @@
             <div class="row align-items-center">
                 <div class="col-md-8">
                     <h1 class="text-center text-md-start">My Journey into AI</h1>
-                    <p class="about-content">My career began in full-stack web development, where I engineered complex systems and built data-driven applications. This experience gave me a deep appreciation for scalable architecture and the power of data. It sparked a passion to move beyond just managing data to truly understanding it, which led me to pursue a Master's degree in Applied Machine Intelligence at Northeastern University.</p>
-                    <p class="about-content">Today, I focus on the complete machine learning lifecycle—from data exploration and model development to deployment. I leverage my background in software engineering to build not just accurate models, but also efficient and scalable AI systems that solve real-world problems. My goal is to bridge the gap between theoretical AI and practical, impactful applications.</p>
+                    <p>My journey into Applied Machine Intelligence began with a fascination for how machines can learn from data and solve problems once thought to be uniquely human. Over time, this curiosity transformed into a structured path of learning and experimentation—starting from the fundamentals of Artificial Intelligence and Machine Learning, and steadily advancing into Deep Learning, Large Language Models, and Agentic AI systems.</p>
+                    <p>What excites me most is applying these skills to create meaningful solutions—whether it’s building predictive systems, enhancing automation, or developing intelligent agents that can reason and adapt. With a strong mix of analytical problem-solving, coding expertise, and applied research, I am ready to bring this journey forward into an internship role, where I can contribute to cutting-edge AI projects while continuing to grow as a practitioner.</p>
                 </div>
                 <div class="col-md-4 text-center d-none d-md-block">
                      <i class="fas fa-brain about-icon"></i>
@@ -353,7 +81,7 @@
                         <div class="card-body">
                             <i class="fas fa-robot skill-icon"></i>
                             <h5>AI/ML</h5>
-                            <p>Scikit-learn, Computer Vision, Deep Learning, LLMs, Gen AI, PyTorch, TensorFlow, JAX</p>
+                            <p>Scikit-learn, Computer Vision, Deep Learning, LLMs, Gen AI, PyTorch, TensorFlow.</p>
                         </div>
                     </div>
                 </div>
@@ -427,37 +155,37 @@
             <div class="row mt-4">
                 <div class="col-md-4 mb-4">
                     <div class="card project-card h-100">
-                        <a href="https://github.com/your-github-username/chest-xray-detection" target="_blank" aria-label="GitHub for Chest X-Ray Project">
-                            <img src="images/project1.jpg" class="card-img-top" alt="Chest X-Ray Pathology Detection Project">
+                        <a href="https://github.com/Poornimatagaram/Machine_learning_Projects/blob/main/X_Ray.ipynb" target="_blank" aria-label="GitHub for Chest X-Ray Project">
+                            <img src="images/X-ray.png" class="card-img-top" alt="Chest X-Ray Pathology Detection Project">
                         </a>
-                         <div class="card-body d-flex flex-column">
+                         <div class="card-body">
                             <h5 class="card-title">Chest X-Ray Pathology Detection with CNN</h5>
                             <p class="card-text">Engineered a deep learning CNN to detect 14 pathologies in chest X-ray images using computer vision and multi-label classification. Implemented a complete end-to-end medical imaging pipeline to provide automated diagnostic assistance.</p>
-                            <a href="https://github.com/your-github-username/chest-xray-detection" target="_blank" class="btn btn-primary project-link mt-auto">View Code <i class="fab fa-github ms-2"></i></a>
+                            <a href="https://github.com/Poornimatagaram/Machine_learning_Projects/blob/main/X_Ray.ipynb" target="_blank" class="btn btn-primary project-link">View Code <i class="fab fa-github ms-2"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
                      <div class="card project-card h-100">
-                        <a href="https://github.com/your-github-username/ecommerce-dashboard" target="_blank" aria-label="GitHub for E-commerce Dashboard Project">
-                            <img src="images/project2.jpg" class="card-img-top" alt="E-commerce Customer Insights Dashboard Project">
+                        <a href="https://github.com/your-github-username/computer-vision-project" target="_blank" aria-label="GitHub for Computer Vision Project">
+                            <img src="images/image_processing.png" class="card-img-top" alt="Computer Vision Project">
                         </a>
-                         <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">E-commerce Customer Insights Dashboard</h5>
-                            <p class="card-text">Developed an insights dashboard using Excel for comprehensive purchasing behavior analysis. Generated actionable business intelligence and delivered data-driven recommendations for marketing optimization and customer segmentation.</p>
-                            <a href="https://github.com/your-github-username/ecommerce-dashboard" target="_blank" class="btn btn-primary project-link mt-auto">View Code <i class="fab fa-github ms-2"></i></a>
+                         <div class="card-body">
+                            <h5 class="card-title">Computer Vision</h5>
+                            <p class="card-text">Implemented a Computer Vision model (ViT-B/16) and applied explainable AI techniques (Attention Maps, Integrated Gradients, Input × Gradient) to evaluate model interpretability and visualize feature attributions.</p>
+                            <a href="https://github.com/your-github-username/computer-vision-project" target="_blank" class="btn btn-primary project-link">View Code <i class="fab fa-github ms-2"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
                      <div class="card project-card h-100">
-                        <a href="https://github.com/your-github-username/netflix-clustering" target="_blank" aria-label="GitHub for Netflix Clustering Project">
-                            <img src="images/project3.jpg" class="card-img-top" alt="Netflix Content Clustering Analysis Project">
+                        <a href="https://github.com/your-github-username/storyteller-ai" target="_blank" aria-label="GitHub for Storyteller AI Project">
+                            <img src="images/storyteller.jpeg" class="card-img-top" alt="Storyteller.ai Project">
                         </a>
-                         <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">Netflix Content Clustering Analysis</h5>
-                            <p class="card-text">Applied unsupervised learning algorithms in Python to analyze content patterns and user preferences on a streaming platform. Identified key genre-specific trends to provide actionable data supporting content strategy decisions.</p>
-                            <a href="https://github.com/your-github-username/netflix-clustering" target="_blank" class="btn btn-primary project-link mt-auto">View Code <i class="fab fa-github ms-2"></i></a>
+                         <div class="card-body">
+                            <h5 class="card-title">Story Teller.ai</h5>
+                            <p class="card-text">AI Storyteller is a creative tool that transforms written ideas into short cinematic-style videos within seconds. Users simply provide a topic or description, and the system generates visually engaging videos with randomly assigned filenames for uniqueness.</p>
+                            <a href="https://github.com/your-github-username/storyteller-ai" target="_blank" class="btn btn-primary project-link">View Code <i class="fab fa-github ms-2"></i></a>
                         </div>
                     </div>
                 </div>
@@ -470,7 +198,7 @@
             <h1 class="text-center">Research & Publications</h1>
             <div class="row mt-5 justify-content-center">
                 <div class="col-md-8">
-                    <div class="research-item mb-4">
+                    <div class="research-item">
                         <h4>Real-Time Smart Transformer Design Based on IoT</h4>
                         <p>Co-authored a research paper exploring IoT applications for infrastructure improvement and societal impact. This work was presented at the <strong>IEEE TEMSMET 2023 conference</strong>.</p>
                     </div>
@@ -478,6 +206,17 @@
                         <h4>Digital Health Education Research</h4>
                         <p>As a Research Assistant, I contributed to a user research study evaluating digital health tools. I provided systematic feedback on interface usability to support patient-centered technology development.</p>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="certificates" class="py-5">
+        <div class="container text-center">
+            <h1>Certificates</h1>
+            <div class="row justify-content-center mt-4">
+                <div class="col-md-8">
+                    <img src="images/dataScienceCertificate.png" class="img-fluid certificate-image" alt="Data Science Certificate">
                 </div>
             </div>
         </div>
@@ -511,7 +250,7 @@
                 <a href="https://www.linkedin.com/in/poornima-tagaram-724870217" target="_blank" aria-label="LinkedIn Profile">
                     <i class="fab fa-linkedin"></i>
                 </a>
-                <a href="https://github.com/your-github-username" target="_blank" aria-label="GitHub Profile"> <i class="fab fa-github"></i>
+                <a href="https://github.com/Poornimatagaram" target="_blank" aria-label="GitHub Profile"> <i class="fab fa-github"></i>
                 </a>
             </div>
         </div>
