@@ -96,11 +96,12 @@
             color: #e0e0e0; /* White/off-white for main headline */
         }
 
-        .my-photo-Poornima { /* Adjusted class name */
-            max-width: 250px; /* Smaller image for a 'short' feel */
-            height: 250px; /* Fixed height for a cropped look */
+        /* My Photo Home - Adjusted for better shape and size */
+        .my-photo-Poornima { 
+            max-width: 300px; /* Increased size */
+            aspect-ratio: 1/1; /* Ensure perfect circle */
             object-fit: cover; /* Ensures image covers the area without distortion */
-            object-position: center; 
+            object-position: center; /* Center the visible part of the image */
             border-radius: 50%;
             border: 5px solid #00e6e6; /* Bright cyan border */
             box-shadow: 0 0 20px rgba(0, 230, 230, 0.5); /* Glowing effect for AI/ML theme */
@@ -201,6 +202,41 @@
             box-shadow: 0 10px 25px rgba(0, 230, 230, 0.3);
             background-color: #222222;
         }
+        .project-card .card-img-top {
+            width: 100%;
+            height: 180px; /* Fixed height for project images */
+            object-fit: cover; /* Cover the area without distortion */
+            border-bottom: 1px solid #333;
+        }
+        .project-card .card-body {
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Pushes content and button apart */
+            flex-grow: 1;
+        }
+        .project-card .card-title {
+            color: #00e6e6; /* Project title color */
+            margin-bottom: 1rem;
+        }
+        .project-link {
+            display: inline-block; /* Make button behave like inline block */
+            margin-top: auto; /* Push to bottom of card body */
+            padding: 0.5rem 1.5rem;
+            font-size: 0.9rem;
+            border-radius: 50px;
+            background-color: #00e6e6;
+            border-color: #00e6e6;
+            color: #0c0c0c;
+            transition: all 0.3s ease;
+        }
+        .project-link:hover {
+            background-color: #00cccc;
+            border-color: #00cccc;
+            transform: translateY(-2px);
+            color: #0c0c0c;
+        }
+
 
         /* Research Section */
         #research { background-color: #0c0c0c !important; }
@@ -209,6 +245,11 @@
             padding: 20px;
             border-left: 4px solid #00e6e6;
             border-radius: 8px;
+            margin-bottom: 1.5rem;
+        }
+        .research-item h4 {
+            color: #e0e0e0; /* Research item title color */
+            margin-bottom: 0.5rem;
         }
 
         /* Contact Section */
@@ -275,7 +316,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6 text-center">
-                    <img src="images/Poornima_Professional_short.png" class="img-fluid my-photo-Poornima" alt="Poornima Tagaram">
+                    <img src="images/Poornima_Professional_short.png" class="img-fluid my-photo-Poornima" alt="Poornima Tagaram AI ML Engineer">
                 </div>
                 <div class="col-md-6">
                     <p class="lead">Machine Learning Engineer</p>
@@ -386,25 +427,37 @@
             <div class="row mt-4">
                 <div class="col-md-4 mb-4">
                     <div class="card project-card h-100">
+                        <a href="https://github.com/your-github-username/chest-xray-detection" target="_blank" aria-label="GitHub for Chest X-Ray Project">
+                            <img src="images/project1.jpg" class="card-img-top" alt="Chest X-Ray Pathology Detection Project">
+                        </a>
                          <div class="card-body d-flex flex-column">
                             <h5 class="card-title">Chest X-Ray Pathology Detection with CNN</h5>
                             <p class="card-text">Engineered a deep learning CNN to detect 14 pathologies in chest X-ray images using computer vision and multi-label classification. Implemented a complete end-to-end medical imaging pipeline to provide automated diagnostic assistance.</p>
+                            <a href="https://github.com/your-github-username/chest-xray-detection" target="_blank" class="btn btn-primary project-link mt-auto">View Code <i class="fab fa-github ms-2"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
                      <div class="card project-card h-100">
+                        <a href="https://github.com/your-github-username/ecommerce-dashboard" target="_blank" aria-label="GitHub for E-commerce Dashboard Project">
+                            <img src="images/project2.jpg" class="card-img-top" alt="E-commerce Customer Insights Dashboard Project">
+                        </a>
                          <div class="card-body d-flex flex-column">
                             <h5 class="card-title">E-commerce Customer Insights Dashboard</h5>
                             <p class="card-text">Developed an insights dashboard using Excel for comprehensive purchasing behavior analysis. Generated actionable business intelligence and delivered data-driven recommendations for marketing optimization and customer segmentation.</p>
+                            <a href="https://github.com/your-github-username/ecommerce-dashboard" target="_blank" class="btn btn-primary project-link mt-auto">View Code <i class="fab fa-github ms-2"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
                      <div class="card project-card h-100">
+                        <a href="https://github.com/your-github-username/netflix-clustering" target="_blank" aria-label="GitHub for Netflix Clustering Project">
+                            <img src="images/project3.jpg" class="card-img-top" alt="Netflix Content Clustering Analysis Project">
+                        </a>
                          <div class="card-body d-flex flex-column">
                             <h5 class="card-title">Netflix Content Clustering Analysis</h5>
                             <p class="card-text">Applied unsupervised learning algorithms in Python to analyze content patterns and user preferences on a streaming platform. Identified key genre-specific trends to provide actionable data supporting content strategy decisions.</p>
+                            <a href="https://github.com/your-github-username/netflix-clustering" target="_blank" class="btn btn-primary project-link mt-auto">View Code <i class="fab fa-github ms-2"></i></a>
                         </div>
                     </div>
                 </div>
