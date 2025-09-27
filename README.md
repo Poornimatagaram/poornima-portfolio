@@ -1,4 +1,4 @@
-# vikesh-portfolio
+# Poornima-portfolio
 
 
 
@@ -19,7 +19,7 @@ git init
 git add .
 git commit -m "Message"
 git branch -M main
-git remote add origin https://gitlab.com/vikesh4964238/vikesh-portfolio.git
+git remote add origin https://github.com/Poornimatagaram/poornima-portfolio.git
 git push -u origin main
 
 git branch -M main
@@ -28,7 +28,7 @@ git push -uf origin main
 
 ## Integrate with your tools
 
-- [ ] [Set up project integrations](https://gitlab.com/vikesh4964238/vikesh-portfolio/-/settings/integrations)
+- [ ] [Set up project integrations](https://github.com/Poornimatagaram/poornima-portfolio/-/settings/integrations)
 
 ## Collaborate with your team
 
